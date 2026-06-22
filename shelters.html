@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Приюты — Komek</title>
+  <link rel="stylesheet" href="shelters.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="header">
+    <div class="header__inner">
+      <a href="index.html" class="logo">
+        <img src="assets/Komek_logo.svg" alt="Komek" />
+      </a>
+      <nav class="nav">
+        <a href="index.html">Главная</a>
+        <a href="shelters.html" class="active">Приюты</a>
+        <a href="bonuses.html">Бонусы</a>
+        <a href="partners.html">Партнеры</a>
+        <a href="contacts.html">Контакты</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero__text">
+      <h1 class="hero__title">
+        База приютов<br />
+        <span class="orange">Казахстана</span>
+      </h1>
+      <p class="hero__desc">
+        Легко находите приюты для животных в своем городе.<br />
+        Адреса, контакты, реквизиты и дополнительная информация о<br />
+        каждом приюте в одном месте.
+      </p>
+      <a href="#" class="btn-outline">Помочь обновить базу &nbsp;→</a>
+    </div>
+    <div class="hero__image">
+      <div class="hero__blob"></div>
+      <img src="Shelter_Database_Page/catt_and_dog.png" alt="Собака и кот" />
+    </div>
+  </section>
+
+  <!-- MAP -->
+  <section class="map-section">
+    <div class="map-wrapper">
+      <img src="assets/map_kazakhstan.svg" alt="Карта Казахстана" class="kz-map-img" />
+      <p class="map-quote"><em>Основатели и работники приютов —<br />герои, которые не носят плащи.</em></p>
+      <div class="map-cities">
+        <span class="city-pin" data-city="uralsk"      style="left:15%;top:37%"><span class="city-dot"></span>Уральск</span>
+        <span class="city-pin" data-city="aktobe"      style="left:27%;top:46%"><span class="city-dot"></span>Актобе</span>
+        <span class="city-pin" data-city="atyrau"      style="left:13%;top:58%"><span class="city-dot"></span>Атырау</span>
+        <span class="city-pin" data-city="aktau"       style="left:9%;top:73%"><span class="city-dot"></span>Актау</span>
+        <span class="city-pin" data-city="kostanay"    style="left:38%;top:23%"><span class="city-dot"></span>Костанай</span>
+        <span class="city-pin" data-city="kokshetau"   style="left:54%;top:18%"><span class="city-dot"></span>Кокшетау</span>
+        <span class="city-pin" data-city="astana"      style="left:57%;top:33%"><span class="city-dot"></span>Астана</span>
+        <span class="city-pin" data-city="karagandy"   style="left:60%;top:50%"><span class="city-dot"></span>Қарағанды</span>
+        <span class="city-pin" data-city="oskemen"     style="left:83%;top:38%"><span class="city-dot"></span>Оскемен</span>
+        <span class="city-pin" data-city="taldykorgan" style="left:77%;top:63%"><span class="city-dot"></span>Талдықорған</span>
+        <span class="city-pin" data-city="almaty"      style="left:72%;top:73%"><span class="city-dot"></span>Алматы</span>
+        <span class="city-pin" data-city="kyzylorda"   style="left:47%;top:69%"><span class="city-dot"></span>Қызылорда</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- SHELTER CARDS -->
+  <section class="shelters-section">
+    <h2 class="shelters-title orange">Приюты</h2>
+
+    <div class="city-filters">
+      <button class="filter-btn active" data-filter="all">Все</button>
+      <button class="filter-btn" data-filter="almaty">Алматы</button>
+      <button class="filter-btn" data-filter="astana">Астана</button>
+      <button class="filter-btn" data-filter="shymkent">Шымкент</button>
+      <button class="filter-btn" data-filter="taldykorgan">Талдықорған</button>
+      <button class="filter-btn" data-filter="semey">Семей</button>
+    </div>
+
+    <div class="cards-grid" id="cardsGrid">
+      <!-- Cards injected by JS -->
+    </div>
+
+    <div class="pagination">
+      <button class="page-btn" id="prevBtn" onclick="prevPage()">← Назад</button>
+      <span id="pageInfo"></span>
+      <button class="page-btn" id="nextBtn" onclick="nextPage()">Вперёд →</button>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer__inner">
+      <img src="Shelter_Database_Page/Korgi_logo.svg" alt="Corgi" class="footer__corgi" />
+      <div class="footer__socials">
+        <a href="#" aria-label="Telegram">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.894 8.221-1.97 9.28c-.145.658-.537.818-1.084.508l-3-2.21-1.447 1.394c-.16.16-.295.295-.605.295l.213-3.053 5.56-5.023c.242-.213-.054-.333-.373-.12L8.32 13.617l-2.96-.924c-.643-.204-.657-.643.136-.953l11.57-4.461c.537-.194 1.006.131.828.942z"/></svg>
+        </a>
+        <a href="#" aria-label="Instagram">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+        </a>
+        <a href="#" aria-label="TikTok">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.69a8.18 8.18 0 004.79 1.53V6.75a4.85 4.85 0 01-1.02-.06z"/></svg>
+        </a>
+        <a href="#" aria-label="Google">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.545 10.239v3.821h5.445c-.712 2.315-2.647 3.972-5.445 3.972a6.033 6.033 0 110-12.064c1.498 0 2.866.549 3.921 1.453l2.814-2.814A9.969 9.969 0 0012.545 2C7.021 2 2.543 6.477 2.543 12s4.478 10 10.002 10c8.396 0 10.249-7.85 9.426-11.748l-9.426-.013z"/></svg>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="shelters.js"></script>
+</body>
+</html>
