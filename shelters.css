@@ -12,6 +12,13 @@ body {
 
 .orange { color: #FF5500; }
 
+.gradient-text {
+  background: linear-gradient(to right, #EC7207 0%, #FD5B80 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
 /* ── HEADER ── */
 .header {
   padding: 18px 60px;
@@ -96,17 +103,6 @@ body {
   flex-shrink: 0;
 }
 
-.hero__blob {
-  width: 340px;
-  height: 340px;
-  background: #FF8C69;
-  border-radius: 60% 40% 55% 45% / 50% 60% 40% 50%;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 0;
-}
 
 .hero__image img {
   position: relative;
